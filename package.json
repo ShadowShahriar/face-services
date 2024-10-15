@@ -1,0 +1,18 @@
+{
+	"type": "module",
+	"private": "true",
+	"main": "index.js",
+	"scripts": {
+		"test": "node index.js",
+		"train": "node train.js",
+		"meta": "node metadata.js"
+	},
+	"dependencies": {
+		"@tensorflow/tfjs": "^4.21.0",
+		"@tensorflow/tfjs-node": "^4.21.0",
+		"@vladmandic/face-api": "^1.7.14",
+		"canvas": "^2.11.2",
+		"node-screenshots": "^0.2.1",
+		"node-webcam": "^0.8.2"
+	}
+}

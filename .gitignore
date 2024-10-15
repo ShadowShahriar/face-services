@@ -1,0 +1,24 @@
+# residuals
+.old
+.test
+
+# node dependencies
+node_modules
+
+# lock file
+package-lock.json
+
+# trained descriptors
+trained.json
+
+# training data
+data/**/
+
+# generated images
+metadata/
+test.jpg
+test.jpeg
+test.png
+result.jpg
+result.jpeg
+result.png
