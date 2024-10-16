@@ -5,14 +5,19 @@
 	"scripts": {
 		"test": "node index.js",
 		"train": "node train.js",
-		"meta": "node metadata.js"
+		"meta": "node metadata.js",
+		"webcam": "node webcam.js"
 	},
 	"dependencies": {
 		"@tensorflow/tfjs": "^4.21.0",
 		"@tensorflow/tfjs-node": "^4.21.0",
 		"@vladmandic/face-api": "^1.7.14",
 		"canvas": "^2.11.2",
+		"colorjs.io": "^0.5.2",
+		"express": "^4.21.1",
+		"html-colors": "^0.0.6",
 		"node-screenshots": "^0.2.1",
-		"node-webcam": "^0.8.2"
+		"node-webcam": "^0.8.2",
+		"open": "^10.1.0"
 	}
 }
