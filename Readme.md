@@ -25,6 +25,13 @@ This will install the following NPM dependencies:
 -   [**node-screenshots**][NPM_05]: Required for taking screenshots using Nodejs (used for testing)
 -   [**node-webcam**][NPM_06]: Required for capturing webcam feed using Nodejs (used for testing)
 
+**Update:** This will also install these additional NPM packages:
+
+-   [**express**][NPM_07]: Required for creating a web server for the webcam demonstration
+-   [**open**][NPM_08]: Required for opening the webcam demonstration in the browser
+-   [**colorjs.io**][NPM_09]: Required for manipulating the colors of the detection labels
+-   [**html_colors**][NPM_10]: Required to get a list of predefined colors
+
 ## Training
 
 Before testing the demo, we need to train the model using our own images. To do this, we can create one or more subfolders in the data directory, each containing images of a specific person's face. For instance, if we want to train the model for two people named **Kaniz** and **Shahriar**, the directory structure would be as follows:
@@ -110,7 +117,16 @@ Copy the ID of your desired window and paste it to the `sourceID` variable. If t
 
 ### From webcam feed
 
-It is also possible to detect faces from the webcam feed. To do this, change the `source` variable to `"webcam"` in the `index.js` file. Get an available list of webcams by running `node metadata.js` and then update the `webcamDeviceID` variable.
+> [!IMPORTANT]
+> There is a better way to detect faces from webcam video.
+
+We can use the `navigator.getUserMedia(...)` function to get webcam video directly in the browser. To see the webcam demo, run:
+
+```bash
+node webcam.js
+```
+
+**Original:** It is also possible to detect faces from the webcam feed. To do this, change the `source` variable to `"webcam"` in the `index.js` file. Get an available list of webcams by running `node metadata.js` and then update the `webcamDeviceID` variable.
 
 In any case, it will generate a `result.jpg` file and draw boxes around the recognized faces.
 
@@ -174,6 +190,10 @@ The source code is licensed under the [**MIT License**][LICENSE].
 [NPM_04]: https://www.npmjs.com/package/@vladmandic/face-api
 [NPM_05]: https://www.npmjs.com/package/node-screenshots
 [NPM_06]: https://www.npmjs.com/package/node-webcam
+[NPM_07]: https://www.npmjs.com/package/express
+[NPM_08]: https://www.npmjs.com/package/open
+[NPM_09]: https://www.npmjs.com/package/colorjs.io
+[NPM_10]: https://www.npmjs.com/package/html-colors
 [WIKI_RPI]: https://en.wikipedia.org/wiki/Raspberry_Pi
 [FACE_API_JS_FORK]: https://github.com/vladmandic/face-api
 [FACE_API_JS]: https://github.com/justadudewhohacks/face-api.js
