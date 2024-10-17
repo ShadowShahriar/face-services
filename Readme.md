@@ -89,7 +89,9 @@ It may take some time to train the model, depending on the number of images it h
 ```
 
 > [!NOTE]
-> It is possible to train the model with **only 1 image** per person but to improve accuracy, it is recommended to use **20-30 images**.
+>
+> -   It is possible to train the model with **ONLY 1 image** per person but to improve accuracy, it is recommended to use **20-30 images**.
+> -   Each image should contain a single well-lit and clearly visible face. Higher-resolution photos (e.g., 2MP/4MP) may improve detection accuracy.
 
 ## Testing
 
@@ -124,6 +126,16 @@ We can use the `navigator.getUserMedia(...)` function to get webcam video direct
 
 ```bash
 node webcam.js
+```
+
+You can switch to your preferred webcam by setting the `webcamID` variable in the `public/script.js` file. There are a couple of other video options that can be adjusted. Here are the defaults:
+
+```js
+const webcamID = 2 // can be obtained by running `node metadata.js`
+const portrait = true // set to false for landscape mode
+const ratio = portrait ? 9 / 16 : 16 / 9 // aspect ratio
+const height = 720 // can be 720, 1080, 1440
+const frameRate = 30
 ```
 
 **Original:** It is also possible to detect faces from the webcam feed. To do this, change the `source` variable to `"webcam"` in the `index.js` file. Get an available list of webcams by running `node metadata.js` and then update the `webcamDeviceID` variable.
