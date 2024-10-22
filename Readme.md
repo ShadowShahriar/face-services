@@ -1,7 +1,7 @@
 # face-services
 
 > [!IMPORTANT]
-> Recently, I started working on the **fourth generation** of [**Jenny**][BOT], a Telegram bot with a quirky personality. Jenny can see the environment around her through the lens of an ESP32 Cam Module. It has always been my dream to build a robot that can recognize me and interact with me. That's why I have been exploring ways to use facial recognition in Nodejs. This is a basic demonstration of how I intend to integrate it into my robot.
+> Recently, I started working on the **fourth generation** of [**Jenny**][BOT], a Telegram bot with a quirky personality. Jenny can see the environment around her through the lens of a 2MP USB Webcam. It has always been my dream to build a robot that can recognize me and interact with me. That's why I have been exploring ways to use facial recognition in Nodejs. This is a basic demonstration of how I intend to integrate it into my robot.
 
 Luckily, I found [**this YouTube video**][YT_VID] by [**Robert Bunch (@robertbunch)**][GH_ACC_01], in which he briefly introduced me to [**face-api.js**][FACE_API_JS] and [**Tensorflow.js**][TF_JS].
 
@@ -65,7 +65,7 @@ These subfolders can contain one or more supported images (`jpg/jpeg` or `png`) 
 ```
 
 > [!NOTE]
-> The images can named any way; it is **NOT** necessary to rename them as `img_01.jpg`, `img_02.jpg`, and so on.
+> The images can be named any way; it is **NOT** necessary to rename them as `img_01.jpg`, `img_02.jpg`, and so on.
 
 When the files are in place, we can run:
 
