@@ -1,6 +1,7 @@
 # residuals
 .old
 .test
+desktop.ini
 
 # node dependencies
 node_modules
